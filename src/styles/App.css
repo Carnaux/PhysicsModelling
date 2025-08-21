@@ -1,0 +1,69 @@
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+
+  & div {
+    flex: 1 !important; /* all charts take equal space */
+    max-width: 50vw !important; /* ensures 3 charts fit in one row */
+    min-width: 250px !important; /* optional: prevents them from getting too small */
+  }
+}
+
+.formulasContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.viewerContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.chartsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  height: 40vh;
+  padding: 0 20px;
+  background-color: aliceblue;
+}
+
+.chart-card {
+  flex: 1 1 0;
+  min-width: 250px; /* keep readable at small widths */
+  max-width: calc(100% / 3); /* force 3 per row */
+  height: 320px; /* can be overridden via prop */
+  box-sizing: border-box;
+}
+
+.controlsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
