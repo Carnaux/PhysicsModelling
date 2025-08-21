@@ -1,13 +1,8 @@
 import "./styles/App.css";
 import { Canvas } from "@react-three/fiber";
-import {
-  CameraControls,
-  Environment,
-  Grid,
-  OrbitControls,
-} from "@react-three/drei";
+import { Environment, Grid, OrbitControls } from "@react-three/drei";
 import { Simulation } from "./components/Simulation";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import {
   EffectComposer,
   Bloom,
@@ -19,7 +14,6 @@ import { useStore } from "./store/Store";
 
 function App() {
   const triggerAction = useStore((state) => state.triggerAction);
-  const [setupDone, setSetupDone] = useState(false);
   const [runSim, setRunSim] = useState(false);
 
   return (

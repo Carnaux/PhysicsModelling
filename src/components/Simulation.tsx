@@ -1,5 +1,5 @@
 import { useFrame } from "@react-three/fiber";
-import { useState, useRef, useEffect, use, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Vector3, type Group } from "three";
 import { Line } from "@react-three/drei";
 import { useStore } from "../store/Store";
@@ -235,7 +235,7 @@ export const Simulation = ({ runSim }: any) => {
   }, [setRenderObjects]);
 
   // Step simulation in render loop
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (runSim && objects.current.length > 0 && T.current < 3) {
       Step(T.current);
       T.current += delta;

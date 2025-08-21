@@ -1,5 +1,4 @@
 import { Text } from "@react-three/drei";
-import { create } from "zustand";
 
 const fontProps = {
   font: "/Inter-Bold.woff",

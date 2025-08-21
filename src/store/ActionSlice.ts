@@ -1,6 +1,5 @@
 import type { StateCreator } from "zustand";
 import type { Action } from "./Action";
-import { ACTION_TRIGGERS } from "./ActionTriggers";
 
 export const createActionSlice: StateCreator<
   ActionSlice,
@@ -31,7 +30,7 @@ export const createActionSlice: StateCreator<
   },
   getActions: (key: string) => get().actions.get(key),
   triggerAction: (
-    trigger: ACTION_TRIGGERS | any,
+    trigger: any,
     targetName: string,
     targetNodeName?,
     event?
@@ -62,7 +61,7 @@ export interface ActionSlice {
   addAction: (action: Action) => void;
   getActions: (key: string) => Action[] | undefined;
   triggerAction: (
-    trigger: ACTION_TRIGGERS | any,
+    trigger: any,
     targetName: string,
     targetNodeName?: string,
     event?: Event | any
